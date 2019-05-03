@@ -45,10 +45,16 @@
       "error": { "value": "#DF1F00" },
       "notify": { "value": "#CFEEFF" }
     },
-    "interation":  {
-      "base": { "value": "#2196f3" },
+    "interaction": {
+      "base": { 
+        "value": "#2196f3",
+        "comment": "Interaction color" 
+      },
       "light": { "value": "#90caf9" },
-      "dark": { "value": "#1976d2" }
+      "dark": {
+        "value": "#1976d2",
+        "comment": "Interaction hover color"
+      }
     },
     "focus": { "value": "#ffbf47" },
     "background": {
