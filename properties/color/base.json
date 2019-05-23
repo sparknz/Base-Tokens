@@ -1,6 +1,7 @@
 {
   "color": {
     "base": {
+      "test": { "value": "123"  },
       "white": { "value": "#FFFFFF" },
       "black": { "value": "#000000" },
       "neutral": {
