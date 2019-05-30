@@ -1,2 +1,4 @@
 node_modules
 build
+properties/brands/*
+!properties/brands/default
