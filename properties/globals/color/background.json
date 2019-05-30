@@ -1,0 +1,20 @@
+{
+  "color": {
+    "background": {
+      "state": {
+        "disable": { "value": "#bdbbbb" },
+        "active": { "value": "#d8dce6" },
+        "success": { "value": "#f6ffed" },
+        "error": { "value": "#fff1f0" },
+        "info": { "value": "#e6f7ff" }
+      },
+      "table": {
+        "base": { "value": "{color.base.white.value}" },
+        "even": { "value": "{color.base.neutral.000.value}" }
+      },
+      "base": { "value": "{color.brand.background.base.value}" },
+      "light": { "value": "{color.brand.background.light.value}" },
+      "dark": { "value": "{color.brand.background.dark.value}" }
+    }
+  }
+}

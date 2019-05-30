@@ -1,0 +1,38 @@
+{
+  "color": {
+    "text": {
+      "base": { "value": "{color.brand.text.base.value}" },
+      "secondary": { "value": "{color.brand.text.secondary.value}" },
+      "on": {
+        "primary": { "value": "{color.brand.text.on.primary.value}" },
+        "secondary": { "value": "{color.brand.text.on.secondary.value}" },
+        "dark": { "value": "{color.brand.text.on.dark.value}" }
+      },
+      "placeholder": { "value": "#9ea0a5" }
+    },
+    "state": {
+      "disable": { "value": "#bdbbbb" },
+      "error": { "value": "{color.base.state.error.value}" },
+      "info": { "value": "{color.base.state.info.value}" },
+      "warning": { "value": "{color.base.state.warning.value}" },
+      "success": { "value": "{color.base.state.success.value}" },
+      "on": {
+        "error": { "value": "rgba(255, 255, 255, 0.85)" },
+        "info": { "value": "rgba(0, 0, 0, 0.85)" },
+        "warning": { "value": "rgba(0, 0, 0, 0.85)" },
+        "success": { "value": "rgba(0, 0, 0, 0.85)" }
+      }
+    },
+    "interaction": {
+      "base": {
+        "value": "{color.base.interaction.base.value}",
+        "comment": "Interaction color"
+      },
+      "light": { "value": "{color.base.interaction.light.value}" },
+      "dark": {
+        "value": "{color.base.interaction.dark.value}",
+        "comment": "Interaction hover color"
+      }
+    }
+  }
+}

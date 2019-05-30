@@ -1,0 +1,37 @@
+{
+  "color": {
+    "brand": {
+      "primary": {
+        "base": { "value": "#004b6b" },
+        "light": { "value": "#406d80" },
+        "dark": { "value": "#033247" }
+      },
+      "secondary": {
+        "base": { "value": "#849BB8" },
+        "light": { "value": "#1F487E" },
+        "dark": { "value": "#1D3461" }
+      },
+      "tertiary": { "value": "#03A9F4" },
+      "accent": { "value": "#00b5e2" },
+      "interaction": {
+        "base": { "value": "#07a" },
+        "light": { "value": "#ffffff" },
+        "dark": { "value": "#004b6b" }
+      },
+      "background": {
+        "base": { "value": "{color.base.white.value}" },
+        "light": { "value": "#f6f6f6" },
+        "dark": { "value": "#424242" }
+      },
+      "text": {
+        "base": { "value": "#424242" },
+        "secondary": { "value": "#757575" },
+        "on": {
+            "primary": { "value": "#ffffff" },
+            "secondary": { "value": "#e3f2fd" },
+            "dark": { "value": "#ffffff" }
+        }
+      }
+    }
+  }
+}

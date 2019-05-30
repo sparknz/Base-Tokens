@@ -1,0 +1,19 @@
+{
+  "font": {
+    "family": {
+      "base": { "value": "{font.family.regular.value}"},
+      "regular": { "value": "Helvetica"},
+      "medium": { "value": "Helvetica"},
+      "bold": { "value": "Helvetica"}
+    },
+    "fallback": {
+        "value": "Arial, sans-serif"
+      },
+    "weight": {
+        "base": { "value": "{font.weight.regular.value}"},
+        "regular": { "value": "400"},
+        "medium": { "value": "500"},
+        "bold": { "value": "700"}
+      }
+  }
+}

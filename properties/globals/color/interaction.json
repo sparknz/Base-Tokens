@@ -1,0 +1,16 @@
+{
+  "color": {
+    "interaction": {
+      "base": {
+        "value": "{color.base.interaction.base.value}",
+        "comment": "Interaction color"
+      },
+      "light": { "value": "{color.base.interaction.light.value}" },
+      "dark": {
+        "value": "{color.base.interaction.dark.value}",
+        "comment": "Interaction hover color"
+      }
+    },
+    "focus": { "value": "{color.base.focus.value}" }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "color": {
+    "icon": {
+      "error": { "value": "{color.base.state.error.value}" },
+      "info": { "value": "{color.base.state.info.value}" },
+      "warning": { "value": "{color.base.state.warning.value}" },
+      "success": { "value": "{color.base.state.success.value}" }
+    }
+  }
+}

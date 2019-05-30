@@ -1,0 +1,42 @@
+{
+  "size": {
+    "font": {
+      "micro": {
+        "value": "0.625",
+        "comment": "Smallest acceptable font size"
+      },
+      "tiny": {
+        "value": "0.75",
+        "comment": "Tiny font size"
+      },
+      "reduced": {
+        "value": "0.875",
+        "comment": "Reduced font size"
+      },
+      "regular": {
+        "value": "1",
+        "comment": "Base font size"
+      },
+      "increased": {
+        "value": "1.125",
+        "comment": "Increased font size"
+      },
+      "large": {
+        "value": "1.5",
+        "comment": "Title - Large"
+      },
+      "huge": {
+        "value": "2.5",
+        "comment": "Title - Huge"
+      },
+      "giant": {
+        "value": "3",
+        "comment": "Title - Giant"
+      },
+      "base": {
+        "value": "{size.font.regular.value}",
+        "comment": "the base size of the font"
+      }
+    }
+  }
+}

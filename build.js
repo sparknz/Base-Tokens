@@ -1,35 +1,68 @@
 const StyleDictionaryPackage = require('style-dictionary');
-const fs = require('fs');
-const deepDiff = require('return-deep-diff');
 
-const config = JSON.parse(fs.readFileSync('./config.json')); 
+// HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
+
+function getStyleDictionaryConfig(brand, platform) {
+  return {
+    "source": [
+      `properties/brands/${brand}/*.json`,
+      "properties/globals/**/*.json",
+      `properties/platforms/${platform}/*.json`
+    ],
+    "platforms": {
+      "web": {
+        "transformGroup": "scss",
+        "buildPath": `build/web/${brand}/`,
+        "files": [{
+          "destination": `${brand}-tokens.scss`,
+          "format": "scss/variables"
+        }]
+      },
+      "android": {
+        "transformGroup": "android",
+        "buildPath": `build/android/${brand}/`,
+        "files": [{
+          "destination": "tokens.colors.xml",
+          "format": "android/colors"
+        },{
+          "destination": "tokens.dimens.xml",
+          "format": "android/dimens"
+        },{
+          "destination": "tokens.font_dimens.xml",
+          "format": "android/fontDimens"
+        }]
+      },
+      "ios": {
+        "transformGroup": "ios",
+        "buildPath": `build/ios/${brand}/`,
+        "files": [{
+          "destination": "tokens.h",
+          "format": "ios/macros"
+        }]
+      }
+    }
+  };
+}
 
 console.log('Build started...');
 
-const StyleDictionary = require('style-dictionary').extend(config);
-StyleDictionary.buildAllPlatforms();
+// PROCESS THE DESIGN TOKENS FOR THE DIFFERENT BRANDS AND PLATFORMS
 
-const varitationTypes = fs.readdirSync('./variations');
+['default', 'companies', 'mbie'].map(function (brand) {
+//   ['web', 'ios', 'android'].map(function (platform) {
+  ['web'].map(function (platform) {
 
-const base = StyleDictionary.exportPlatform('web/json');
-const output = {
-    base,
-}
-
-varitationTypes.map(function (variationType) {
     console.log('\n==============================================');
-    output[variationType] = {};
-    fs.readdirSync(`./variations/${variationType}`).map(function (variation) {
-        console.log('\n==============================================');
-        console.log('Collision from here are normal');
-        const myConfig = Object.assign({}, config);
-        myConfig.source.push(`variations/${variationType}/${variation}/**/*.json`)
-        const StyleDictionaryVariation = require('style-dictionary').extend(config);
-        output[variationType][variation] = deepDiff(base, StyleDictionaryVariation.exportPlatform('web/json'), true);
-        
-    });
+    console.log(`\nProcessing: [${platform}] [${brand}]`);
+
+    const StyleDictionary = StyleDictionaryPackage.extend(getStyleDictionaryConfig(brand, platform));
+
+    StyleDictionary.buildPlatform(platform);
+
+    console.log('\nEnd processing');
+
+  })
 })
 
 console.log('\n==============================================');
-console.log('Writing tokens with variations');
-fs.writeFileSync('./build/web/tokensWithVariations.json', JSON.stringify(output));
+console.log('\nBuild completed!');

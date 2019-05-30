@@ -1,0 +1,19 @@
+{
+  "color": {
+    "border": {
+      "light": { "value": "{color.base.neutral.100.value}" },
+      "base": { "value": "{color.base.neutral.200.value}" },
+      "dark": { "value": "{color.base.neutral.300.value}" },
+      "focus": { "value": "{color.base.focus.value}" },
+      "error": { "value": "{color.base.state.error.value}" },
+      "warning": { "value": "{color.base.state.warning.value}" },
+      "success": { "value": "{color.base.state.success.value}" },
+      "info": { "value": "{color.base.state.info.value}" },
+      "disabled": { "value": "{color.base.state.disabled.value}" },
+      "table": { 
+        "light": { "value": "{color.base.neutral.100.value}" },
+        "dark": { "value": "{color.base.neutral.300.value}" }
+      }
+    }
+  }
+}
