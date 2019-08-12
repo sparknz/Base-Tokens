@@ -1,8 +1,8 @@
 {
     "radius": {
       "border": {
-        "small": { "value":"0.4rem" },
-        "medium":  { "value":"0.8rem" },
+        "small": { "value":"0.2rem" },
+        "medium":  { "value":"0.4rem" },
         "large":  { "value":"1rem" }
       }
     }
