@@ -1,0 +1,7 @@
+{
+    "border": {
+      "small"    : { "value": "1px" },
+      "base"     : { "value": "2px" },
+      "large"    : { "value": "4px" }
+    }
+  }

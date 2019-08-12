@@ -14,6 +14,11 @@
         "regular": { "value": "400"},
         "medium": { "value": "500"},
         "bold": { "value": "700"}
+      },
+    "lineheight": {
+        "base": { "value": "1.4"},
+        "body": { "value": "{font.lineheight.base.value}"},
+        "heading": { "value": "1.25"}
       }
   }
 }

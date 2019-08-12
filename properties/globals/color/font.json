@@ -16,6 +16,7 @@
         "warning": { "value": "{color.base.state.warning.value}" },
         "success": { "value": "{color.base.state.success.value}" },
         "on": {
+          "disabled": { "value": "rgba(0, 0, 0, 0.85)" },
           "error": { "value": "rgba(255, 255, 255, 0.85)" },
           "info": { "value": "rgba(0, 0, 0, 0.85)" },
           "warning": { "value": "rgba(0, 0, 0, 0.85)" },
@@ -32,7 +33,9 @@
       "dark": {
         "value": "{color.base.interaction.dark.value}",
         "comment": "Interaction hover color"
-      }
+      },
+      "active": { "value": "{color.base.interaction.dark.value}" },
+      "visited": { "value": "{color.base.interaction.base.value}" }
     }
   }
 }
