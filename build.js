@@ -18,6 +18,28 @@ function getStyleDictionaryConfig(brand, platform) {
           "format": "scss/variables"
         }]
       },
+      "json": {
+        "transformGroup": "scss",
+        "buildPath": `build/web/${brand}/`,
+        "files": [
+        {
+          "destination": `${brand}-tokens-color.json`,
+          "format": "json/flat",
+          "filter": {
+            "attributes": {
+              "category": "color"
+            }
+          }
+        }]
+      },
+      "css": {
+        "transformGroup": "web",
+        "buildPath": `build/css/${brand}/`,
+        "files": [{
+          "destination": `${brand}-tokens.css`,
+          "format": "css/variables"
+        }]
+      },
       "android": {
         "transformGroup": "android",
         "buildPath": `build/android/${brand}/`,
@@ -48,9 +70,9 @@ console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFERENT BRANDS AND PLATFORMS
 
-['default', 'companies', 'mbie'].map(function (brand) {
+['default', 'companies', 'mbie', 'mattr'].map(function (brand) {
 //   ['web', 'ios', 'android'].map(function (platform) {
-  ['web'].map(function (platform) {
+  ['web', 'json'].map(function (platform) {
 
     console.log('\n==============================================');
     console.log(`\nProcessing: [${platform}] [${brand}]`);
