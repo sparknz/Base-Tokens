@@ -2,11 +2,11 @@
   "color": {
     "background": {
       "state": {
-        "disable": { "value": "#bdbbbb" },
-        "active": { "value": "#d8dce6" },
-        "success": { "value": "#f6ffed" },
+        "disabled": { "value": "#bdbbbb" },
         "error": { "value": "#fff1f0" },
-        "info": { "value": "#e6f7ff" }
+        "info": { "value": "#e6f7ff" },
+        "warning": { "value": "#d8dce6" },
+        "success": { "value": "#f6ffed" }
       },
       "table": {
         "base": { "value": "{color.base.white.value}" },
@@ -14,7 +14,8 @@
       },
       "base": { "value": "{color.brand.background.base.value}" },
       "light": { "value": "{color.brand.background.light.value}" },
-      "dark": { "value": "{color.brand.background.dark.value}" }
+      "dark": { "value": "{color.brand.background.dark.value}" },
+      "transparent": { "value" : "rgba(0,0,0,0)"}
     }
   }
 }

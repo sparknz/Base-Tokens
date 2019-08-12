@@ -9,8 +9,9 @@
       "dark": {
         "value": "{color.base.interaction.dark.value}",
         "comment": "Interaction hover color"
-      }
-    },
-    "focus": { "value": "{color.base.focus.value}" }
+      },
+      "active": { "value": "{color.base.interaction.dark.value}" },
+      "focus": { "value": "{color.base.focus.value}"}
+    }
   }
 }
