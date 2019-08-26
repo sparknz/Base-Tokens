@@ -5,6 +5,7 @@
   <title>Style Dictionary - Style once, use everywhere. A build system for creating cross-platform styles.</title>
 <%
 
+var brandColor = _.filter(allProperties, {category: 'background-color'});
 var backgroundColor = _.filter(allProperties, {category: 'background-color'});
 var borderColor = _.filter(allProperties, {category: 'border-color'});
 var textColor = _.filter(allProperties, {category: 'text-color'});
@@ -36,6 +37,28 @@ font-family: "Lucida Console", Monaco, monospace;
 }
 
 </style>
+
+<h2>Brand Color</h2>
+<table>
+<thead>
+  <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="example">Example</th>
+      <th class="comment">Comment</th>
+  </tr>
+</thead>
+<tbody>
+  <%  _.each(textColor, function(prop) {%><tr>
+  <td>$<%= prop.name %></td>
+<td class="value"><%= prop.value %></td>
+<td style="color: <%= prop.value %>;">The quick brown fox jumps over the lazy dog.</td>
+<td><% if (prop.comment) { %><%= prop.comment %><% } %></td></tr>
+<% }); %>
+</tbody>
+</table>
+
+<hr>
 
 <h2>Background Color</h2>
 <table>
