@@ -1,18 +1,29 @@
 {
   "color": {
     "border": {
-      "light": { "value": "{color.base.neutral.100.value}" },
-      "base": { "value": "{color.base.neutral.200.value}" },
-      "dark": { "value": "{color.base.neutral.300.value}" },
-      "focus": { "value": "{color.base.focus.value}" },
-      "error": { "value": "{color.base.state.error.value}" },
-      "warning": { "value": "{color.base.state.warning.value}" },
-      "success": { "value": "{color.base.state.success.value}" },
-      "info": { "value": "{color.base.state.info.value}" },
-      "disabled": { "value": "{color.base.state.disabled.value}" },
+      "light": { "value": "{color.base.neutral.100.value}",
+      "category": "border-color" },
+      "base": { "value": "{color.base.neutral.200.value}",
+      "category": "border-color" },
+      "dark": { "value": "{color.base.neutral.300.value}",
+      "category": "border-color" },
+      "focus": { "value": "{color.base.focus.value}",
+      "category": "border-color" },
+      "error": { "value": "{color.base.state.error.value}",
+      "category": "border-color" },
+      "warning": { "value": "{color.base.state.warning.value}",
+      "category": "border-color" },
+      "success": { "value": "{color.base.state.success.value}",
+      "category": "border-color" },
+      "info": { "value": "{color.base.state.info.value}",
+      "category": "border-color" },
+      "disabled": { "value": "{color.base.state.disabled.value}",
+      "category": "border-color" },
       "table": { 
-        "light": { "value": "{color.base.neutral.100.value}" },
-        "dark": { "value": "{color.base.neutral.300.value}" }
+        "light": { "value": "{color.base.neutral.100.value}",
+        "category": "border-color" },
+        "dark": { "value": "{color.base.neutral.300.value}",
+        "category": "border-color" }
       }
     }
   }

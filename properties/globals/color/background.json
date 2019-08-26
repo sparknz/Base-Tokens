@@ -2,20 +2,33 @@
   "color": {
     "background": {
       "state": {
-        "disabled": { "value": "#bdbbbb" },
-        "error": { "value": "#fff1f0" },
-        "info": { "value": "#e6f7ff" },
-        "warning": { "value": "#d8dce6" },
-        "success": { "value": "#f6ffed" }
+        "disabled": { "value": "#bdbbbb",
+        "category": "background-color" },
+        "error": { "value": "#fff1f0",
+          "category": "background-color" },
+        "info": { "value": "#e6f7ff",
+          "category": "background-color" },
+        "warning": { "value": "#d8dce6",
+          "category": "background-color" },
+        "success": { "value": "#f6ffed",
+          "category": "background-color" }
       },
       "table": {
-        "base": { "value": "{color.base.white.value}" },
-        "even": { "value": "{color.base.neutral.000.value}" }
+        "base": { "value": "{color.base.white.value}",
+        "category": "background-color" },
+        "even": { "value": "{color.base.neutral.000.value}",
+        "category": "background-color" }
       },
-      "base": { "value": "{color.brand.background.base.value}" },
-      "light": { "value": "{color.brand.background.light.value}" },
-      "dark": { "value": "{color.brand.background.dark.value}" },
-      "transparent": { "value" : "rgba(0,0,0,0)"}
+      "base": { "value": "{color.brand.background.base.value}",
+      "category": "background-color" },
+      "light": { "value": "{color.brand.background.light.value}",
+      "category": "background-color" },
+      "dark": { "value": "{color.brand.background.dark.value}",
+      "category": "background-color" },
+      "transparent": { "value" : "rgba(0,0,0,0)",
+        "category": "background-color"},
+      "modal": {"value": "rgba(255,255,255,0.4)",
+        "category": "background-color"}
     }
   }
 }

@@ -1,22 +1,22 @@
 {
     "time": {
       "transition": {
-        "short": { "value":"200" },
-        "base":  { "value":"400" },
-        "long":  { "value":"600" },
-        "xl":    { "value":"1000" }
+        "short": { "value":"200ms" },
+        "base":  { "value":"400ms" },
+        "long":  { "value":"600ms" },
+        "xl":    { "value":"1000ms" }
       },
  
       "delay": {
-        "short": { "value":"50" },
-        "base":  { "value":"100" },
-        "long":  { "value":"200" }
+        "short": { "value":"50ms" },
+        "base":  { "value":"100ms" },
+        "long":  { "value":"200ms" }
       },
  
       "duration": {
-        "short": { "value":"2000" },
-        "base":  { "value":"4000" },
-        "long":  { "value":"6000" }
+        "short": { "value":"200ms" },
+        "base":  { "value":"400ms" },
+        "long":  { "value":"600ms" }
       }
     }
   }
