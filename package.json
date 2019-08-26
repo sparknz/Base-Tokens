@@ -8,6 +8,8 @@
     "build": "node build.js"
   },
   "devDependencies": {
+    "fs": "^0.0.1-security",
+    "lodash": "^4.17.15",
     "style-dictionary": "^2.7.0"
   },
   "dependencies": {

@@ -1,4 +1,18 @@
-const StyleDictionaryPackage = require('style-dictionary');
+const StyleDictionaryPackage = require('style-dictionary').extend(__dirname + '/config.json');
+//const StyleDictionary = require('style-dictionary').extend(__dirname + '/config.json');
+const fs = require('fs');
+const _ = require('lodash');
+
+  // These formatting functions are using the Lodash "template" syntax
+
+StyleDictionaryPackage.registerFormat({
+  name: 'custom/html',
+  formatter: _.template(fs.readFileSync(__dirname + '/templates/web-html.template'))
+});
+StyleDictionaryPackage.registerFormat({
+  name: 'static/html',
+  formatter: _.template(fs.readFileSync(__dirname + '/templates/static-site-html.template'))
+});
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
@@ -16,6 +30,14 @@ function getStyleDictionaryConfig(brand, platform) {
         "files": [{
           "destination": `${brand}-tokens.scss`,
           "format": "scss/variables"
+        },
+        {
+          "destination": `${brand}-tokens.css`,
+          "format": "css/variables"
+        },
+        {
+          "destination": `${brand}-tokens.html`,
+          "format": "custom/html"
         }]
       },
       "json": {
@@ -24,7 +46,7 @@ function getStyleDictionaryConfig(brand, platform) {
         "files": [
         {
           "destination": `${brand}-tokens-color.json`,
-          "format": "json/flat",
+          "format": "json/nested",
           "filter": {
             "attributes": {
               "category": "color"
@@ -70,7 +92,7 @@ console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFERENT BRANDS AND PLATFORMS
 
-['default', 'companies', 'mbie', 'mattr'].map(function (brand) {
+['default', 'companies', 'mbie', 'mattr', 'bank-of-aotearoa'].map(function (brand) {
 //   ['web', 'ios', 'android'].map(function (platform) {
   ['web', 'json'].map(function (platform) {
 

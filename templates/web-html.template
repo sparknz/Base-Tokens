@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Style Dictionary - Style once, use everywhere. A build system for creating cross-platform styles.</title>
+<%
+
+var backgroundColor = _.filter(allProperties, {category: 'background-color'});
+var borderColor = _.filter(allProperties, {category: 'border-color'});
+var textColor = _.filter(allProperties, {category: 'text-color'});
+
+%>
+
+<style>
+body {
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.name,
+.value,
+.example,
+.comment {
+    min-width: 20ch;
+}
+
+th, td {
+padding: 4px 16px 4px 0;
+text-align:left;}
+
+.name, .example {
+    min-width: 30ch;  
+}
+
+.value {
+font-family: "Lucida Console", Monaco, monospace;
+}
+
+</style>
+
+<h2>Background Color</h2>
+<table>
+<thead>
+  <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="example">Example</th>
+      <th class="comment">Comment</th>
+  </tr>
+</thead>
+<tbody>
+  <%  _.each(backgroundColor, function(prop) {
+%><tr>
+<td>$<%= prop.name %></td>
+<td class="value"><%= prop.value %></td>
+<td style="background-color:<%= prop.value %>;"></td>
+<td><% if (prop.comment) { %><%= prop.comment %><% } %></td></tr>
+<% }); %>
+</tbody>
+</table>
+
+<h2>Border Color</h2>
+<table>
+<thead>
+  <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="example">Example</th>
+      <th class="comment">Comment</th>
+  </tr>
+</thead>
+<tbody>
+  <%  _.each(borderColor, function(prop) {%><tr>
+  <td>$<%= prop.name %></td>
+<td class="value"><%= prop.value %></td>
+<td style="border: 2px solid <%= prop.value %>;"></td>
+<td><% if (prop.comment) { %><%= prop.comment %><% } %></td></tr>
+<% }); %>
+</tbody>
+</table>
+
+
+<h2>Text Color</h2>
+<table>
+<thead>
+  <tr>
+      <th class="name">Name</th>
+      <th class="value">Value</th>
+      <th class="example">Example</th>
+      <th class="comment">Comment</th>
+  </tr>
+</thead>
+<tbody>
+  <%  _.each(textColor, function(prop) {%><tr>
+  <td>$<%= prop.name %></td>
+<td class="value"><%= prop.value %></td>
+<td style="color: <%= prop.value %>;">The quick brown fox jumps over the lazy dog.</td>
+<td><% if (prop.comment) { %><%= prop.comment %><% } %></td></tr>
+<% }); %>
+</tbody>
+</table>
+
+<hr>
+// https://github.com/amzn/style-dictionary/issues/95
+
+
+
+</body>
+</html>
