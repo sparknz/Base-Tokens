@@ -16,23 +16,23 @@
         "000": { "value": "#f8f9f9" }
       },
       "primary": {
-        "base": { "value": "{color.brand.primary.base.value}" },
-        "light": { "value": "{color.brand.primary.light.value}" },
-        "dark": { "value": "{color.brand.primary.dark.value}" }
+        "base": { "value": "{brand.primary.base.value}" },
+        "light": { "value": "{brand.primary.light.value}" },
+        "dark": { "value": "{brand.primary.dark.value}" }
       },
       "secondary": {
-        "base": { "value": "{color.brand.secondary.base.value}" },
-        "light": { "value": "{color.brand.secondary.light.value}" },
-        "dark": { "value": "{color.brand.secondary.dark.value}" }
+        "base": { "value": "{brand.secondary.base.value}" },
+        "light": { "value": "{brand.secondary.light.value}" },
+        "dark": { "value": "{brand.secondary.dark.value}" }
       },
-      "tertiary": { "value": "{color.brand.tertiary.value}" },
-      "accent": { "value": "{color.brand.accent.value}" },
+      "tertiary": { "value": "{brand.tertiary.value}" },
+      "accent": { "value": "{brand.accent.value}" },
       "interaction": {
-        "base": { "value": "{color.brand.interaction.base.value}" },
-        "light": { "value": "{color.brand.interaction.light.value}" },
-        "dark": { "value": "{color.brand.interaction.dark.value}" }
+        "base": { "value": "{brand.interaction.base.value}" },
+        "light": { "value": "{brand.interaction.light.value}" },
+        "dark": { "value": "{brand.interaction.dark.value}" }
       },
-      "focus": { "value": "{color.brand.accent.value}" },
+      "focus": { "value": "{brand.accent.value}" },
       "state": {
         "error": { "value": "#FF5630" },
         "info": { "value": "#00B8D9" },
