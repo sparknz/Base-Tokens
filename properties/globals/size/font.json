@@ -2,40 +2,44 @@
   "size": {
     "font": {
       "micro": {
-        "value": "0.625",
-        "comment": "Smallest acceptable font size"
+        "value": 0.625,
+        "comment": "Smallest acceptable font size",
+        "category": "font-size"
       },
       "tiny": {
-        "value": "0.75",
-        "comment": "Tiny font size"
+        "value": 0.75,
+        "comment": "Tiny font size",
+        "category": "font-size"
       },
       "reduced": {
-        "value": "0.875",
-        "comment": "Reduced font size"
+        "value": 0.875,
+        "comment": "Reduced font size",
+        "category": "font-size"
       },
       "regular": {
-        "value": "1",
-        "comment": "Base font size"
+        "value": 1,
+        "comment": "Base font size",
+        "category": "font-size"
       },
       "increased": {
-        "value": "1.125",
-        "comment": "Increased font size"
+        "value": 1.125,
+        "comment": "Increased font size",
+        "category": "font-size"
       },
       "large": {
-        "value": "1.5",
-        "comment": "Title - Large"
+        "value": 1.5,
+        "comment": "Title - Large",
+        "category": "font-size"
       },
       "huge": {
-        "value": "2.5",
-        "comment": "Title - Huge"
+        "value": 2.5,
+        "comment": "Title - Huge",
+        "category": "font-size"
       },
       "giant": {
-        "value": "3",
-        "comment": "Title - Giant"
-      },
-      "base": {
-        "value": "{size.font.regular.value}",
-        "comment": "the base size of the font"
+        "value": 3,
+        "comment": "Title - Giant",
+        "category": "font-size"
       }
     }
   }

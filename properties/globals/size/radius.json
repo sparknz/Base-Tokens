@@ -1,0 +1,10 @@
+{
+  "size": {
+    "radius": {
+      "default": { "value": 4, "category": "border-radius" },
+      "small": { "value": 2, "category": "border-radius" },
+      "large": { "value": 8, "category": "border-radius" },
+      "medium": { "value": 4, "category": "border-radius" }
+    }
+  }
+}

@@ -9,10 +9,59 @@ StyleDictionaryPackage.registerFormat({
   name: 'custom/html',
   formatter: _.template(fs.readFileSync(__dirname + '/templates/web-html.template'))
 });
-StyleDictionaryPackage.registerFormat({
-  name: 'static/html',
-  formatter: _.template(fs.readFileSync(__dirname + '/templates/static-site-html.template'))
+
+StyleDictionaryPackage.registerTransform({
+  name: 'size/unitless',
+  type: 'value',
+  matcher: function(prop) {
+    return ["size", "spacing", "time", "shadow"].some(val => val === prop.attributes.category);
+  },
+  transformer: function(prop) {
+      return Number.parseFloat(prop.value);
+  }
 });
+
+StyleDictionaryPackage.registerTransformGroup({
+  name: 'accessibility',
+  transforms: [
+    'attribute/cti',
+    'name/cti/kebab',
+    'time/seconds',
+    'content/icon',
+    'size/rem',
+    'color/hex'
+  ]
+});
+
+// StyleDictionaryPackage.registerTransform({
+//   name: 'react/radius',
+//   type: 'value',
+//   matcher: function(prop) {
+//     return ["radius"].some(val => val === prop.attributes.category);
+//   },
+//   transformer: function(prop) {
+//       return Number.parseFloat(prop.value * 16);
+//   }
+// });
+
+StyleDictionaryPackage.registerTransform({ 
+    name: 'size/fontScale',
+    type: 'value',
+    matcher: function(prop) {
+      return prop.attributes.category === 'size' && prop.attributes.type === 'font'
+    },
+    transformer: function(prop) {
+      return (prop.original.value * 16);
+    }
+});
+
+StyleDictionaryPackage.registerFilter({
+  name: 'filter-alias',
+  matcher: function(prop) {
+    return prop.attributes.category !== 'brand';
+  }
+});
+
 
 // HAVE THE STYLE DICTIONARY CONFIG DYNAMICALLY GENERATED
 
@@ -25,76 +74,66 @@ function getStyleDictionaryConfig(brand, platform) {
     ],
     "platforms": {
       "web": {
-        "transformGroup": "scss",
-        "buildPath": `build/web/${brand}/`,
+        "transformGroup": "accessibility",
+        "buildPath": `build/${brand}/web/`,
         "files": [{
           "destination": `${brand}-tokens.scss`,
-          "format": "scss/variables"
+          "format": "scss/variables",
+          "filter": "filter-alias"
         },
         {
           "destination": `${brand}-tokens.css`,
-          "format": "css/variables"
-        },
-        {
-          "destination": `${brand}-tokens.html`,
-          "format": "custom/html"
-        }]
+          "format": "css/variables",
+          "filter": "filter-alias"
+        }
+      ]
       },
-      "json": {
-        "transformGroup": "scss",
-        "buildPath": `build/web/${brand}/`,
+      "accessibility": {
+        "transformGroup": "accessibility",
+        "buildPath": `build/${brand}/accesibility/`,
         "files": [
         {
-          "destination": `${brand}-tokens-color.json`,
-          "format": "json/nested",
+          "destination": `${brand}-color-tokens.scss`,
+          "format": "scss/variables",
           "filter": {
             "attributes": {
               "category": "color"
             }
           }
-        }]
+        }
+      ]
       },
-      "css": {
-        "transformGroup": "web",
-        "buildPath": `build/css/${brand}/`,
-        "files": [{
-          "destination": `${brand}-tokens.css`,
-          "format": "css/variables"
-        }]
+      "styleguide": {
+        "transformGroup": "scss",
+        "buildPath": `build/${brand}/styleguide/`,
+        "files": [
+        {
+          "destination": `${brand}-tokens.html`,
+          "format": "custom/html",
+          "filter": "filter-alias"
+        }
+      ]
       },
-      "android": {
-        "transformGroup": "android",
-        "buildPath": `build/android/${brand}/`,
-        "files": [{
-          "destination": "tokens.colors.xml",
-          "format": "android/colors"
-        },{
-          "destination": "tokens.dimens.xml",
-          "format": "android/dimens"
-        },{
-          "destination": "tokens.font_dimens.xml",
-          "format": "android/fontDimens"
-        }]
-      },
-      "ios": {
-        "transformGroup": "ios",
-        "buildPath": `build/ios/${brand}/`,
-        "files": [{
-          "destination": "tokens.h",
-          "format": "ios/macros"
-        }]
+      "reactNative": {
+        "transforms": ["attribute/cti","name/cti/camel","size/unitless","size/fontScale"],
+        "buildPath": `build/${brand}/react-native/`,
+        "files": [
+          {
+          "destination": `${brand}-tokens.json`,
+          "format": "json/nested"
+          }
+        ],
       }
     }
-  };
+  
+  }
 }
 
-console.log('Build started...');
 
 // PROCESS THE DESIGN TOKENS FOR THE DIFFERENT BRANDS AND PLATFORMS
 
-['default', 'companies', 'mbie', 'mattr', 'bank-of-aotearoa'].map(function (brand) {
-//   ['web', 'ios', 'android'].map(function (platform) {
-  ['web', 'json'].map(function (platform) {
+['mattr'].map(function (brand) {
+  ['reactNative', 'web', 'styleguide', 'accessibility'].map(function (platform) {
 
     console.log('\n==============================================');
     console.log(`\nProcessing: [${platform}] [${brand}]`);

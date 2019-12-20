@@ -5,7 +5,7 @@
   <title>Style Dictionary - Style once, use everywhere. A build system for creating cross-platform styles.</title>
 <%
 
-var brandColor = _.filter(allProperties, {category: 'background-color'});
+var brandColor = _.filter(allProperties, {category: 'color'});
 var backgroundColor = _.filter(allProperties, {category: 'background-color'});
 var borderColor = _.filter(allProperties, {category: 'border-color'});
 var textColor = _.filter(allProperties, {category: 'text-color'});
@@ -33,12 +33,13 @@ text-align:left;}
 }
 
 .value {
+    min-width: 30ch;  
 font-family: "Lucida Console", Monaco, monospace;
 }
 
 </style>
 
-<h2>Brand Color</h2>
+<h2>Colors</h2>
 <table>
 <thead>
   <tr>
@@ -49,10 +50,10 @@ font-family: "Lucida Console", Monaco, monospace;
   </tr>
 </thead>
 <tbody>
-  <%  _.each(textColor, function(prop) {%><tr>
+  <%  _.each(brandColor, function(prop) {%><tr>
   <td>$<%= prop.name %></td>
 <td class="value"><%= prop.value %></td>
-<td style="color: <%= prop.value %>;">The quick brown fox jumps over the lazy dog.</td>
+<td style="background-color:<%= prop.value %>;"></td>
 <td><% if (prop.comment) { %><%= prop.comment %><% } %></td></tr>
 <% }); %>
 </tbody>
@@ -81,6 +82,8 @@ font-family: "Lucida Console", Monaco, monospace;
 </tbody>
 </table>
 
+<hr>
+
 <h2>Border Color</h2>
 <table>
 <thead>
@@ -101,6 +104,7 @@ font-family: "Lucida Console", Monaco, monospace;
 </tbody>
 </table>
 
+<hr>
 
 <h2>Text Color</h2>
 <table>

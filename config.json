@@ -34,7 +34,7 @@
       "transformGroup": "ios",
       "buildPath": "build/ios/",
       "files": [{
-        "destination": "StyleDictionaryColor.h",
+        "destination": "StyleDictionarycolor.h",
         "format": "ios/colors.h",
         "className": "StyleDictionaryColor",
         "type": "StyleDictionaryColorName",
@@ -44,7 +44,7 @@
           }
         }
       },{
-        "destination": "StyleDictionaryColor.m",
+        "destination": "StyleDictionarycolor.m",
         "format": "ios/colors.m",
         "className": "StyleDictionaryColor",
         "type": "StyleDictionaryColorName",

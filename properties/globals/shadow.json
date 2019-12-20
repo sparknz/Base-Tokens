@@ -1,16 +1,22 @@
 {
     "shadow": {
-      "box": {
-        "base": {
-          "offset": { "value":"0 1px 3px" },
-          "blur":  { "value":"0" },
-          "color":  { "value":"rgba(0, 0, 0, 0.04)" }
+      "text": {
+        "blur":  { "value":"0" },
+        "offset": { 
+            "width":  { "value":"0" },
+            "height":  { "value":"0" }
         },
-        "card": {
-          "offset": { "value":"0 1px 0" },
-          "blur":  { "value":"0" },
-          "color":  { "value":"rgba(234, 237, 243, 1)" }
-        }
+        "opacity": { "value":"3" },
+        "radius": { "value":"{size.radius.small.value}" }
+      },
+      "box": {
+        "blur":  { "value":"0" },
+        "offset": { 
+            "width":  { "value":"0" },
+            "height":  { "value":"0" }
+        },
+        "opacity": { "value":"3" },
+        "radius": { "value":"{size.radius.large.value}" }
       }
     }
 }

@@ -1,45 +1,9 @@
 {
   "color": {
-    "base": {
-      "white": { "value": "#FFFFFF" },
-      "black": { "value": "#000000" },
-      "neutral": {
-        "900": { "value": "#374047" },
-        "800": { "value": "#5f6e78" },
-        "700": { "value": "#7f8a93" },
-        "600": { "value": "#97a1a7" },
-        "500": { "value": "#acb4b9" },
-        "400": { "value": "#bec4c8" },
-        "300": { "value": "#cfd3d6" },
-        "200": { "value": "#dee1e3" },
-        "100": { "value": "#ebedee" },
-        "000": { "value": "#f8f9f9" }
-      },
-      "primary": {
-        "base": { "value": "{brand.primary.base.value}" },
-        "light": { "value": "{brand.primary.light.value}" },
-        "dark": { "value": "{brand.primary.dark.value}" }
-      },
-      "secondary": {
-        "base": { "value": "{brand.secondary.base.value}" },
-        "light": { "value": "{brand.secondary.light.value}" },
-        "dark": { "value": "{brand.secondary.dark.value}" }
-      },
-      "tertiary": { "value": "{brand.tertiary.value}" },
-      "accent": { "value": "{brand.accent.value}" },
-      "interaction": {
-        "base": { "value": "{brand.interaction.base.value}" },
-        "light": { "value": "{brand.interaction.light.value}" },
-        "dark": { "value": "{brand.interaction.dark.value}" }
-      },
-      "focus": { "value": "{brand.accent.value}" },
-      "state": {
-        "error": { "value": "#FF5630" },
-        "info": { "value": "#00B8D9" },
-        "warning": { "value": "#FFAB00" },
-        "success": { "value": "#36B37E" },
-        "disabled": { "value": "{color.base.neutral.200.value}" }
-      }
+    "transparent": { "value": "rgba(0,0,0,0)", "category": "color" },
+    "shadow": {
+      "light": { "value": "hsla(0,0,0,0.2)", "category": "color" },
+      "dark": { "value": "hsla(0,0,0,0.4)", "category": "color" }
     }
   }
 }

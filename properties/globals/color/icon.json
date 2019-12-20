@@ -1,10 +1,14 @@
 {
   "color": {
     "icon": {
-      "error": { "value": "{color.base.state.error.value}" },
-      "info": { "value": "{color.base.state.info.value}" },
-      "warning": { "value": "{color.base.state.warning.value}" },
-      "success": { "value": "{color.base.state.success.value}" }
+      "error": { "value": "{color.background.state.error.value}",
+      "category": "background-color" },
+      "info": { "value": "{color.background.state.info.value}",
+      "category": "background-color" },
+      "warning": { "value": "{color.background.state.warning.value}",
+      "category": "background-color" },
+      "success": { "value": "{color.background.state.success.value}",
+      "category": "background-color" }
     }
   }
 }

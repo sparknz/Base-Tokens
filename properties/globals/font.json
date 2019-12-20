@@ -1,24 +1,26 @@
 {
   "font": {
     "family": {
-      "base": { "value": "{font.family.regular.value}"},
-      "regular": { "value": "Helvetica"},
-      "medium": { "value": "Helvetica"},
-      "bold": { "value": "Helvetica"}
-    },
-    "fallback": {
-        "value": "Arial, sans-serif"
+      "base": {
+        "value": "{font.family.regular.value}",
+        "category": "font-family"
       },
-    "weight": {
-        "base": { "value": "{font.weight.regular.value}"},
-        "regular": { "value": "400"},
-        "medium": { "value": "500"},
-        "bold": { "value": "700"}
-      },
-    "lineheight": {
-        "base": { "value": "1.4"},
-        "body": { "value": "{font.lineheight.base.value}"},
-        "heading": { "value": "1.25"}
+      "regular": { "value": "Roboto", "category": "font-family" },
+      "medium": { "value": "Roboto", "category": "font-family" },
+      "bold": { "value": "Roboto", "category": "font-family" },
+      "fallback": {
+        "value": "Arial, sans-serif",
+        "category": "font-family"
       }
+    },
+    "weight": {
+      "regular": { "value": "400", "category": "font-weight" },
+      "medium": { "value": "500", "category": "font-weight" },
+      "bold": { "value": "700", "category": "font-weight" }
+    },
+    "lineheight": {
+      "body": { "value": "1.4"},
+      "heading": { "value": "1.25"}
+    }
   }
 }

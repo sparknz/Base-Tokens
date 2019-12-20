@@ -1,10 +1,9 @@
 {
     "size": {
       "icon": {
-        "small"    : { "value": "0.75rem" },
-        "medium"   : { "value": "1rem" },
-        "large"    : { "value": "1.5rem" },
-        "base"     : { "value": "{size.icon.medium.value}" }
+        "large"    : { "value": 1.5 },
+        "medium"   : { "value": 1 },
+        "small"    : { "value": 0.75 }
       }
     }
   }
