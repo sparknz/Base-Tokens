@@ -1,6 +1,6 @@
 {
   "color": {
-    "transparent": { "value": "rgba(0,0,0,0)", "category": "color" },
+    "transparent": { "value": "transparent", "category": "color" },
     "shadow": {
       "light": { "value": "hsla(0,0,0,0.2)", "category": "color" },
       "dark": { "value": "hsla(0,0,0,0.4)", "category": "color" }
