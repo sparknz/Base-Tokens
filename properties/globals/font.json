@@ -2,25 +2,25 @@
   "font": {
     "family": {
       "base": {
-        "value": "{font.family.regular.value}",
+        "value": "{brand.font.family.base.value}",
         "category": "font-family"
       },
-      "regular": { "value": "Roboto", "category": "font-family" },
-      "medium": { "value": "Roboto", "category": "font-family" },
-      "bold": { "value": "Roboto", "category": "font-family" },
+      "regular": { "value": "{brand.font.family.regular.value}", "category": "font-family" },
+      "medium": { "value": "{brand.font.family.medium.value}", "category": "font-family" },
+      "bold": { "value": "{brand.font.family.bold.value}", "category": "font-family" },
       "fallback": {
-        "value": "Arial, sans-serif",
+        "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',  'Oxygen', 'Ubuntu', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
         "category": "font-family"
       }
     },
     "weight": {
       "regular": { "value": "400", "category": "font-weight" },
       "medium": { "value": "500", "category": "font-weight" },
-      "bold": { "value": "700", "category": "font-weight" }
+      "bold": { "value": "600", "category": "font-weight" }
     },
     "lineheight": {
-      "body": { "value": "1.4"},
-      "heading": { "value": "1.25"}
+      "body": { "value": 1.4},
+      "heading": { "value": 1.25}
     }
   }
 }
