@@ -1,24 +1,24 @@
 {
-    "spacing": {
-      "vertical": {
-        "default"   : { "value": "{brand.spacing.medium.value}" },
-        "tiny"     : { "value": "{brand.spacing.tiny.value}" },
-        "small"    : { "value": "{brand.spacing.small.value}" },
-        "medium"   : { "value": "{brand.spacing.medium.value}" },
-        "large"    : { "value": "{brand.spacing.large.value}" },
-        "xl"       : { "value": "{brand.spacing.xl.value}" },
-        "xxl"      : { "value": "{brand.spacing.xxl.value}" },
-        "xxxl"     : { "value": "{brand.spacing.xxxl.value}" }
-      },
-      "horizontal": {
-        "default"   : { "value": "{brand.spacing.medium.value}" },
-        "tiny"     : { "value": "{brand.spacing.tiny.value}" },
-        "small"    : { "value": "{brand.spacing.small.value}" },
-        "medium"   : { "value": "{brand.spacing.medium.value}" },
-        "large"    : { "value": "{brand.spacing.large.value}" },
-        "xl"       : { "value": "{brand.spacing.xl.value}" },
-        "xxl"      : { "value": "{brand.spacing.xxl.value}" },
-        "xxxl"     : { "value": "{brand.spacing.xxxl.value}" }
-      }
+  "spacing": {
+    "vertical": {
+      "default": { "value": "{brand.spacing.medium.value}" },
+      "tiny": { "value": "{brand.spacing.tiny.value}" },
+      "small": { "value": "{brand.spacing.small.value}" },
+      "medium": { "value": "{brand.spacing.medium.value}" },
+      "large": { "value": "{brand.spacing.large.value}" },
+      "xl": { "value": "{brand.spacing.xl.value}" },
+      "xxl": { "value": "{brand.spacing.xxl.value}" },
+      "xxxl": { "value": "{brand.spacing.xxxl.value}" }
+    },
+    "horizontal": {
+      "default": { "value": "{brand.spacing.medium.value}" },
+      "tiny": { "value": "{brand.spacing.tiny.value}" },
+      "small": { "value": "{brand.spacing.small.value}" },
+      "medium": { "value": "{brand.spacing.medium.value}" },
+      "large": { "value": "{brand.spacing.large.value}" },
+      "xl": { "value": "{brand.spacing.xl.value}" },
+      "xxl": { "value": "{brand.spacing.xxl.value}" },
+      "xxxl": { "value": "{brand.spacing.xxxl.value}" }
     }
   }
+}
