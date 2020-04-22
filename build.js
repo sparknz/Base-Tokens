@@ -14,10 +14,10 @@ StyleDictionaryPackage.registerTransform({
   name: 'size/unitless',
   type: 'value',
   matcher: function(prop) {
-    return ["size", "spacing", "time", "shadow"].some(val => val === prop.attributes.category);
+    return ["size", "time", "shadow"].some(val => val === prop.attributes.category);
   },
   transformer: function(prop) {
-      return Number.parseFloat(prop.value);
+      return Number.parseFloat(prop.original.value);
   }
 });
 
@@ -48,7 +48,8 @@ StyleDictionaryPackage.registerTransform({
     name: 'size/fontScale',
     type: 'value',
     matcher: function(prop) {
-      return prop.attributes.category === 'size' && prop.attributes.type === 'font'
+      return (prop.attributes.category === 'size' || prop.attributes.category === 'font') && 
+      (prop.attributes.type === 'font' || prop.attributes.type === 'icon' || prop.attributes.type === 'lineheight')
     },
     transformer: function(prop) {
       return (prop.original.value * 16);
@@ -93,8 +94,8 @@ function getStyleDictionaryConfig(brand, platform) {
         "buildPath": `build/${brand}/accesibility/`,
         "files": [
         {
-          "destination": `${brand}-color-tokens.scss`,
-          "format": "scss/variables",
+          "destination": `${brand}-color-tokens.json`,
+          "format": "json/nested",
           "filter": {
             "attributes": {
               "category": "color"
@@ -109,8 +110,7 @@ function getStyleDictionaryConfig(brand, platform) {
         "files": [
         {
           "destination": `${brand}-tokens.html`,
-          "format": "custom/html",
-          "filter": "filter-alias"
+          "format": "custom/html"
         }
       ]
       },
