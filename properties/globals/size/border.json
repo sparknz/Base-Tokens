@@ -1,9 +1,9 @@
 { 
   "size": {
     "border": {
-      "regular"     : { "value": "2" },
-      "large"    : { "value": "4" },
-      "small"    : { "value": "1" }
+      "regular"     : { "value": 2 },
+      "large"    : { "value": 4 },
+      "small"    : { "value": 1 }
     }
   }
 }
